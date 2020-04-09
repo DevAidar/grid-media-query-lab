@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("fonts/Avenir Next Lt Pro/AvenirNextLTPro-Regular.otf");
+}
+
+body {
+    font-family: "Avenir Next" !important;
+    background-color: white;
+}
+
+header,
+footer {
+    display: block;
+    background-color: rgb(55, 55, 55);
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 5px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+ul > li {
+    margin: 1em 1em 1em 2em;
+}
+
+li > a {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: red;
+    box-shadow: 0 5px darkred;
+    color: white;
+    padding: 0.5em 1em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+li > a:hover {
+    background-color: rgb(222, 0, 0);
+    cursor: pointer;
+}
+
+li > a:active {
+    box-shadow: none;
+    top: 5px;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.main-info {
+    display: block;
+    margin: 2em;
+    text-align: justify;
+}
+
+.main-info > h1 {
+    margin-bottom: 1em;
+}
+
+.main-sections {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main-sections > hr {
+    margin: 0 1em 0 1em;
+}
+
+.main-section-1 {
+    margin: 2em;
+    text-align: justify;
+}
+
+.main-section-1 > h2 {
+    margin-bottom: 1em;
+}
+
+.main-section-2 {
+    margin: 2em;
+    text-align: justify;
+}
+
+.main-section-2 > h2 {
+    margin-bottom: 1em;
+}
+
+.main-section-3 {
+    margin: 2em;
+    text-align: justify;
+}
+
+.main-section-3 > h2 {
+    margin-bottom: 1em;
+}
+
+.main-section-aside {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section-aside > h3 {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.main-section-aside > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #2b6dad;
+    margin: 1em;
+}
+
+section > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #2b6dad;
+}
+
+section > a:hover,
+.main-section-aside > a:hover {
+    text-decoration: underline;
+}
+
+.main-section-aside > form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-input {
+    box-sizing: border-box;
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.sub-button {
+    box-sizing: content-box;
+    padding: 0.5em;
+    font-weight: 200;
+    font-size: 12px;
+    align-self: flex-end;
+    margin-top: 1em;
+}
+
+.sub-button:hover {
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+
+.footer-links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    padding-bottom: 1em;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: white;
+    font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+    main > hr,
+    .main-sections > hr {
+        margin: 0 1em 0 1em;
+    }
+}
+
+@media (max-width: 647px) {
+    ul > li {
+        margin: 1em 0.5em 1em 0;
+    }
+}
+
+@media (max-width: 490px) {
+    nav > ul {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        padding-bottom: 5px;
+        margin: auto 0.5em auto 0.5em;
+    }
+
+    ul > li {
+        margin: 1em 0.5em 1em 0;
+    }
+
+    li > a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 0;
+        background-color: rgb(55, 55, 55);
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    li > a:hover {
+        background-color: rgb(55, 55, 55);
+        cursor: pointer;
+    }
+    
+    li > a:active {
+        box-shadow: none;
+        top: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-info > h1 {
+        font-size: x-large;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: stretch;
+        align-items: flex-start;
+        align-content: flex-start;
+        padding-bottom: 5px;
+        margin: auto 0.5em auto 0.5em;
+    }
+}
+
+@media (max-width: 300px) {
+    .main-info > h1 {
+        font-size: large;
+    }
+}
+
